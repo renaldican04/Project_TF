@@ -1,59 +1,234 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Sistem Penjualan Jersey Online
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Deskripsi
 
-## About Laravel
+Sistem Penjualan Jersey Online adalah aplikasi berbasis web yang dikembangkan menggunakan Laravel untuk memudahkan pengguna dalam melihat katalog jersey, melakukan pemesanan, serta mengelola transaksi pembelian secara online.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Project ini dibuat sebagai bagian dari pembelajaran dan pengembangan portofolio pada bidang Web Development dan Sistem Informasi.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Fitur Utama
 
-## Learning Laravel
+### User
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+* Melihat katalog produk jersey
+* Melihat detail produk
+* Melakukan registrasi akun
+* Login dan logout
+* Menambahkan produk ke keranjang
+* Melakukan checkout pesanan
+* Melihat riwayat pembelian
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Administrator
 
-## Laravel Sponsors
+* Login Admin
+* Mengelola data produk
+* Menambah produk baru
+* Mengubah data produk
+* Menghapus produk
+* Mengelola data pengguna
+* Mengelola transaksi pesanan
+* Melihat laporan penjualan
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+---
 
-### Premium Partners
+## Teknologi yang Digunakan
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+* Laravel 12
+* PHP 8+
+* MySQL
+* HTML5
+* CSS3
+* JavaScript
+* Vite
+* Bootstrap
+* Composer
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Struktur Project
 
-## Code of Conduct
+```text
+Project_TF/
+│
+├── app/
+├── bootstrap/
+├── config/
+├── database/
+├── public/
+├── resources/
+├── routes/
+├── storage/
+├── tests/
+│
+├── .editorconfig
+├── .env.example
+├── .gitattributes
+├── .gitignore
+│
+├── artisan
+├── composer.json
+├── composer.lock
+├── package.json
+├── phpunit.xml
+├── vite.config.js
+└── README.md
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+## Cara Instalasi
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 1. Clone Repository
 
-## License
+```bash
+git clone https://github.com/USERNAME/NAMA_REPOSITORY.git
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 2. Masuk ke Folder Project
+
+```bash
+cd NAMA_REPOSITORY
+```
+
+### 3. Install Dependency PHP
+
+```bash
+composer install
+```
+
+### 4. Install Dependency Frontend
+
+```bash
+npm install
+```
+
+### 5. Copy File Environment
+
+```bash
+cp .env.example .env
+```
+
+### 6. Generate Application Key
+
+```bash
+php artisan key:generate
+```
+
+### 7. Konfigurasi Database
+
+Buat database baru pada MySQL kemudian sesuaikan konfigurasi pada file `.env`.
+
+Contoh:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=nama_database
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+### 8. Jalankan Migrasi Database
+
+```bash
+php artisan migrate
+```
+
+Jika menggunakan seeder:
+
+```bash
+php artisan db:seed
+```
+
+### 9. Jalankan Server Laravel
+
+```bash
+php artisan serve
+```
+
+### 10. Jalankan Vite
+
+```bash
+npm run dev
+```
+
+Aplikasi dapat diakses melalui:
+
+```text
+http://127.0.0.1:8000
+```
+
+---
+
+## Tujuan Project
+
+* Mengembangkan kemampuan Web Development menggunakan Laravel.
+* Memahami implementasi CRUD pada aplikasi web.
+* Mempelajari integrasi database menggunakan MySQL.
+* Menambah portofolio pengembangan aplikasi berbasis web.
+
+---
+
+## Ruang Lingkup
+
+* Manajemen data produk
+* Manajemen pengguna
+* Manajemen transaksi
+* Sistem autentikasi
+* Dashboard administrator
+
+---
+
+## Screenshot Aplikasi
+
+### Halaman Beranda
+
+Tambahkan screenshot pada folder:
+
+```text
+screenshots/home.png
+```
+
+### Dashboard Admin
+
+```text
+screenshots/dashboard.png
+```
+
+### Halaman Produk
+
+```text
+screenshots/products.png
+```
+
+---
+
+## Peran
+
+### Developer
+
+* Renaldi Can
+
+### Posisi
+
+* System Analyst
+* Web Developer
+
+---
+
+## Repository
+
+GitHub Repository:
+
+```text
+https://github.com/renaldican04/NAMA_REPOSITORY
+```
+
+---
+
+## Catatan
+
+Project ini dibuat untuk keperluan pembelajaran, pengembangan portofolio, dan implementasi konsep pengembangan aplikasi web menggunakan Laravel Framework.
