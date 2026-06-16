@@ -1,4 +1,5 @@
-# Sistem Penjualan Jersey Online
+# Teknologi Framework - Sistem Penjualan Online
+Sistem Penjualan Jersey Online
 
 ## Deskripsi
 
@@ -14,8 +15,6 @@ Project ini dibuat sebagai bagian dari pembelajaran dan pengembangan portofolio 
 
 * Melihat katalog produk jersey
 * Melihat detail produk
-* Melakukan registrasi akun
-* Login dan logout
 * Menambahkan produk ke keranjang
 * Melakukan checkout pesanan
 * Melihat riwayat pembelian
@@ -29,7 +28,6 @@ Project ini dibuat sebagai bagian dari pembelajaran dan pengembangan portofolio 
 * Menghapus produk
 * Mengelola data pengguna
 * Mengelola transaksi pesanan
-* Melihat laporan penjualan
 
 ---
 
@@ -179,53 +177,6 @@ http://127.0.0.1:8000
 * Manajemen transaksi
 * Sistem autentikasi
 * Dashboard administrator
-
----
-
-## Screenshot Aplikasi
-
-### Halaman Beranda
-
-Tambahkan screenshot pada folder:
-
-```text
-screenshots/home.png
-```
-
-### Dashboard Admin
-
-```text
-screenshots/dashboard.png
-```
-
-### Halaman Produk
-
-```text
-screenshots/products.png
-```
-
----
-
-## Peran
-
-### Developer
-
-* Renaldi Can
-
-### Posisi
-
-* System Analyst
-* Web Developer
-
----
-
-## Repository
-
-GitHub Repository:
-
-```text
-https://github.com/renaldican04/NAMA_REPOSITORY
-```
 
 ---
 
